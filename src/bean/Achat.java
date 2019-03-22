@@ -6,6 +6,7 @@
 package bean;
 
 import java.io.Serializable;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,7 +28,7 @@ public class Achat implements Serializable {
     private String nom;
     private String mode;
     
-    @OneToOne
+    @OneToOne(cascade = CascadeType.REMOVE)
     private TypeAchats typeAchats;
     @ManyToOne
     private Client client;

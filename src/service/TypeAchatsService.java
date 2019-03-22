@@ -25,6 +25,12 @@ public class TypeAchatsService extends AbstractFacade<TypeAchats> {
         return typeAchats;
      }
         
+        public int deleteTypeAchats(String nom){
+        TypeAchats typeAchats = findByNom(nom);
+        remove(typeAchats);
+        return 1;
+          }
+        
          public TypeAchatsService() {
         super(TypeAchats.class);
     }

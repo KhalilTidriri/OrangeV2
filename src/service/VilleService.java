@@ -29,4 +29,10 @@ public class VilleService extends AbstractFacade<Ville>{
         return (Ville) getEntityManager().createQuery(query).getSingleResult();
     }
     
+     public int deleteVille(String nom){
+        Ville ville = findByNom(nom);
+        remove(ville);
+        return 1;
+          }
+    
 }

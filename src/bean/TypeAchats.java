@@ -6,6 +6,7 @@
 package bean;
 
 import java.io.Serializable;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,7 +27,7 @@ public class TypeAchats implements Serializable {
     private Long id;
     private String nom;
     private double prix;
-     @OneToOne(mappedBy = "typeAchats")
+     @OneToOne(mappedBy = "typeAchats", cascade = CascadeType.REMOVE)
     private Achat achats;
 
     public TypeAchats() {

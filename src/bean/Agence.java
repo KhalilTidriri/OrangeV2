@@ -7,6 +7,7 @@ package bean;
 
 import java.io.Serializable;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,9 +29,9 @@ public class Agence implements Serializable {
     private Long id;
     private String nom;
     private String adresse;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Ville ville;
-      @OneToMany(mappedBy = "agence")
+      @OneToMany(mappedBy = "agence", cascade = CascadeType.REMOVE)
     private List<Client> clients;
 
     public Agence() {

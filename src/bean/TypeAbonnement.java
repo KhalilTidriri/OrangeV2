@@ -7,6 +7,7 @@ package bean;
 
 import java.io.Serializable;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,7 +22,7 @@ import javax.persistence.OneToOne;
 @Entity
 public class TypeAbonnement implements Serializable {
 
-    @OneToOne(mappedBy = "typeAbonnement")
+    @OneToOne(mappedBy = "typeAbonnement", cascade = CascadeType.REMOVE)
     private Abonnement abonnement;
 
     private static final long serialVersionUID = 1L;

@@ -82,12 +82,22 @@ public class AdminController implements Initializable {
          JOptionPane.showMessageDialog(null, "Agence ajoutée", "INFO", JOptionPane.INFORMATION_MESSAGE);
      }
      
-     
+     @FXML
+     private void deleteAgence(ActionEvent event){
+         agenceService.deleteAgence(nom3.getText());
+          JOptionPane.showMessageDialog(null, "Agence supprimée", "INFO", JOptionPane.INFORMATION_MESSAGE);
+     }
      
     @FXML
     private void ajouterTypeAbonnement(ActionEvent event) {
      typeAbonnementService.ajouterTypeAbonnement(nom.getText(), new Double(prix.getText()));
      JOptionPane.showMessageDialog(null, "Abonnement ajouté", "INFO", JOptionPane.INFORMATION_MESSAGE);
+    }
+    
+    @FXML
+    private void deleteTypeAbonnement(ActionEvent event){
+        typeAbonnementService.deleteTypeAbonnement(nom.getText());
+        JOptionPane.showMessageDialog(null, "Abonnement supprimé", "INFO", JOptionPane.INFORMATION_MESSAGE);
     }
     
     @FXML
@@ -97,16 +107,24 @@ public class AdminController implements Initializable {
     }
     
     @FXML
+    private void deleteTypeAchats(ActionEvent event){
+        typeAchatsService.deleteTypeAchats(nom1.getText());
+         JOptionPane.showMessageDialog(null,"Produit supprimé","INFO", JOptionPane.INFORMATION_MESSAGE);
+    }
+    
+    
+    @FXML
     private void ajouterVille(ActionEvent event){
         villeService.ajouterVille(nom2.getText());
         JOptionPane.showMessageDialog(null, "Ville ajoutée", "INFO", JOptionPane.INFORMATION_MESSAGE);
     }
-//    
-//    @FXML
-//    private void ajouterAgence(ActionEvent event){
-//        agenceService.ajouterAgence(nom3.getText(), adresse.getText(), ville.);
-//    }        
-//    
+    
+    @FXML
+    private void deleteVille(ActionEvent event){
+        villeService.deleteVille(nom2.getText());
+        JOptionPane.showMessageDialog(null, "Ville supprimée", "INFO", JOptionPane.INFORMATION_MESSAGE);
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

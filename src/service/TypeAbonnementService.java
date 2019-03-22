@@ -19,6 +19,8 @@ public class TypeAbonnementService extends AbstractFacade<TypeAbonnement>{
         return (TypeAbonnement) getEntityManager().createQuery(query).getSingleResult();
     }
     
+  
+    
      public TypeAbonnement ajouterTypeAbonnement(String nom, double prix){
         TypeAbonnement typeAbonnement = new TypeAbonnement();
         typeAbonnement.setNom(nom);
@@ -26,6 +28,17 @@ public class TypeAbonnementService extends AbstractFacade<TypeAbonnement>{
         create(typeAbonnement);
         return typeAbonnement;
      }
+     
+     
+    
+   
+       public int deleteTypeAbonnement(String nom){
+        TypeAbonnement typeAbonnement = findByNom(nom);
+        remove(typeAbonnement);
+        return 1;
+          }
+    
+       
     
     public TypeAbonnementService() {
         super(TypeAbonnement.class);

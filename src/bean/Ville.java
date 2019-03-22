@@ -7,6 +7,7 @@ package bean;
 
 import java.io.Serializable;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,7 +26,7 @@ public class Ville implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
-    @OneToMany(mappedBy = "ville")
+    @OneToMany(mappedBy = "ville", cascade = CascadeType.REMOVE)
     private List<Agence> agences;
 
     public Ville() {

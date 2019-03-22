@@ -25,9 +25,7 @@ public class AgenceService extends AbstractFacade<Agence>{
         create (agence);
         return agence;
     }
-    
-     
-    
+   
     
     public List<Agence> searchByCriteria(String nom, Ville ville){
         String query = constructQuery(nom, ville);
@@ -56,7 +54,17 @@ public class AgenceService extends AbstractFacade<Agence>{
         return (Agence) getEntityManager().createQuery(query).getSingleResult();
     }
     
+         
+          public Agence findByNom(String nom){
+        String query="SELECT ag FROM Agence ag WHERE ag.nom='"+nom+"'";
+        return (Agence) getEntityManager().createQuery(query).getSingleResult();
+    }
      
+          public int deleteAgence(String nom){
+        Agence agence = findByNom(nom);
+        remove(agence);
+        return 1;
+          }
      
     
     public AgenceService() {

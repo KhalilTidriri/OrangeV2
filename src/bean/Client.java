@@ -8,6 +8,7 @@ package bean;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -33,7 +34,7 @@ public class Client implements Serializable {
     private String nationalite;
     @OneToMany(mappedBy = "client")
     private List<Abonnement> abonnements;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     private Agence agence;
     @OneToMany(mappedBy = "client")
     private List<Achat> achats;

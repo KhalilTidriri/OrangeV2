@@ -27,23 +27,23 @@
                                     <Image url="file:/C:/Users/Dell/Desktop/image.jpeg" />
                                  </image>
                               </ImageView>
-                              <Button layoutX="390.0" layoutY="357.0" mnemonicParsing="false" onAction="#ajouterTypeAbonnement" text="AJOUTER">
+                              <Button layoutX="337.0" layoutY="311.0" mnemonicParsing="false" onAction="#ajouterTypeAbonnement" text="AJOUTER">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font></Button>
-                              <Label layoutX="293.0" layoutY="153.0" text="Nom :" textFill="#ff8205">
+                              <Label layoutX="266.0" layoutY="118.0" text="Nom :" textFill="#ff8205">
                                  <font>
                                     <Font name="System Bold" size="19.0" />
                                  </font></Label>
-                              <Label layoutX="293.0" layoutY="255.0" text="Prix :" textFill="#ff8205">
+                              <Label layoutX="271.0" layoutY="217.0" text="Prix :" textFill="#ff8205">
                                  <font>
                                     <Font name="System Bold" size="19.0" />
                                  </font></Label>
-                              <TextField fx:id="nom" layoutX="477.0" layoutY="159.0">
+                              <TextField fx:id="nom" layoutX="380.0" layoutY="118.0" prefHeight="31.0" prefWidth="254.0">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font></TextField>
-                              <TextField fx:id="prix" layoutX="477.0" layoutY="254.0">
+                              <TextField fx:id="prix" layoutX="380.0" layoutY="217.0" prefHeight="31.0" prefWidth="254.0">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font></TextField>
@@ -52,6 +52,11 @@
                                     <Image url="file:/C:/Users/Dell/Desktop/Nouveau%20dossier%20(2)/logo.png" />
                                  </image>
                               </ImageView>
+                              <Button layoutX="543.0" layoutY="311.0" mnemonicParsing="false" onAction="#deleteTypeAbonnement" text="SUPPRIMER">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
                            </children>
                            <effect>
                               <Glow />
@@ -68,23 +73,23 @@
                                     <Image url="file:/C:/Users/Dell/Desktop/image.jpeg" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="297.0" layoutY="139.0" text="Nom :" textFill="#ff8205">
+                              <Label layoutX="268.0" layoutY="106.0" text="Nom :" textFill="#ff8205">
                                  <font>
                                     <Font name="System Bold" size="20.0" />
                                  </font></Label>
-                              <Label layoutX="297.0" layoutY="234.0" text="Prix :" textFill="#ff8205">
+                              <Label layoutX="268.0" layoutY="190.0" text="Prix :" textFill="#ff8205">
                                  <font>
                                     <Font name="System Bold" size="20.0" />
                                  </font></Label>
-                              <TextField fx:id="nom1" layoutX="456.0" layoutY="139.0">
+                              <TextField fx:id="nom1" layoutX="371.0" layoutY="106.0" prefHeight="31.0" prefWidth="272.0">
                                  <font>
                                     <Font name="System Bold Italic" size="15.0" />
                                  </font></TextField>
-                              <TextField fx:id="prix1" layoutX="457.0" layoutY="234.0">
+                              <TextField fx:id="prix1" layoutX="371.0" layoutY="190.0" prefHeight="31.0" prefWidth="272.0">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font></TextField>
-                              <Button layoutX="399.0" layoutY="347.0" mnemonicParsing="false" onAction="#ajouterTypeAchats" text="AJOUTER">
+                              <Button layoutX="316.0" layoutY="271.0" mnemonicParsing="false" onAction="#ajouterTypeAchats" text="AJOUTER">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font></Button>
@@ -93,6 +98,11 @@
                                     <Image url="file:/C:/Users/Dell/Desktop/Nouveau%20dossier%20(2)/logo.png" />
                                  </image>
                               </ImageView>
+                              <Button layoutX="511.0" layoutY="271.0" mnemonicParsing="false" onAction="#deleteTypeAchats" text="SUPPRIMER">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
                            </children>
                         </AnchorPane>
                     </content>
@@ -106,12 +116,12 @@
                                     <Image url="file:/C:/Users/Dell/Desktop/image.jpeg" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="270.0" layoutY="149.0" text="Nom :" textFill="#ff8205">
+                              <Label layoutX="255.0" layoutY="101.0" text="Nom :" textFill="#ff8205">
                                  <font>
                                     <Font name="System Bold" size="19.0" />
                                  </font></Label>
-                              <TextField fx:id="nom2" layoutX="412.0" layoutY="147.0" />
-                              <Button layoutX="356.0" layoutY="268.0" mnemonicParsing="false" onAction="#ajouterVille" text="AJOUTER">
+                              <TextField fx:id="nom2" layoutX="377.0" layoutY="101.0" prefHeight="31.0" prefWidth="239.0" />
+                              <Button layoutX="377.0" layoutY="223.0" mnemonicParsing="false" onAction="#ajouterVille" text="AJOUTER">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font></Button>
@@ -120,6 +130,11 @@
                                     <Image url="file:/C:/Users/Dell/Desktop/Nouveau%20dossier%20(2)/logo.png" />
                                  </image>
                               </ImageView>
+                              <Button layoutX="519.0" layoutY="223.0" mnemonicParsing="false" onAction="#deleteVille" text="SUPPRIMER">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
                            </children>
                         </AnchorPane>
                     </content>
@@ -133,30 +148,35 @@
                                     <Image url="file:/C:/Users/Dell/Desktop/image.jpeg" />
                                  </image>
                               </ImageView>
-                              <Label layoutX="280.0" layoutY="118.0" text="Nom :" textFill="#ff8205">
+                              <Label layoutX="276.0" layoutY="82.0" text="Nom :" textFill="#ff8205">
                                  <font>
                                     <Font name="System Bold" size="19.0" />
                                  </font></Label>
-                              <Label layoutX="280.0" layoutY="203.0" text="Adresse :" textFill="#ff8205">
+                              <Label layoutX="278.0" layoutY="133.0" text="Adresse :" textFill="#ff8205">
                                  <font>
                                     <Font name="System Bold" size="19.0" />
                                  </font></Label>
-                              <Label layoutX="280.0" layoutY="291.0" text="Ville :" textFill="#ff8205">
+                              <Label layoutX="279.0" layoutY="185.0" text="Ville :" textFill="#ff8205">
                                  <font>
                                     <Font name="System Bold" size="19.0" />
                                  </font></Label>
-                              <Button layoutX="379.0" layoutY="389.0" mnemonicParsing="false" onAction="#ajouterAgence" text="AJOUTER">
+                              <Button layoutX="331.0" layoutY="269.0" mnemonicParsing="false" onAction="#ajouterAgence" text="AJOUTER">
                                  <font>
                                     <Font name="System Bold" size="15.0" />
                                  </font></Button>
-                              <TextField fx:id="nom3" layoutX="497.0" layoutY="118.0" />
-                              <TextField fx:id="adresse" layoutX="497.0" layoutY="203.0" />
-                              <ComboBox fx:id="ville" layoutX="497.0" layoutY="291.0" prefHeight="31.0" prefWidth="185.0" />
+                              <TextField fx:id="nom3" layoutX="372.0" layoutY="81.0" prefHeight="31.0" prefWidth="281.0" />
+                              <TextField fx:id="adresse" layoutX="373.0" layoutY="132.0" prefHeight="31.0" prefWidth="280.0" />
+                              <ComboBox fx:id="ville" layoutX="374.0" layoutY="184.0" prefHeight="31.0" prefWidth="278.0" />
                               <ImageView fitHeight="104.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="file:/C:/Users/Dell/Desktop/Nouveau%20dossier%20(2)/logo.png" />
                                  </image>
                               </ImageView>
+                              <Button layoutX="513.0" layoutY="269.0" mnemonicParsing="false" onAction="#deleteAgence" prefHeight="31.0" prefWidth="107.0" text="SUPPRIMER">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
                            </children>
                         </AnchorPane>
                     </content>
